@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+
+<div class="section">
+    <table class ="table table-striped" border = "1" style="font-family:Sans-serif;color:white;font-size:175%">
+        <thead>
+            <tr class = "standard">
+                <th style = "text-align:left">Age</th>
+                <th>Gender</th>
+                <th>Weight</th>
+                <th>Height</th>
+                <th>BMI</th>
+                
+
+            </tr>
+        </thead>
+        <tfoot>
+          
+        </tfoot>
+        <tbody>
+            <tr>
+                <td style = "text-align:left">{{information["age"]}}</td>
+                <td>{{information["gender"]}}</td>
+                <td>{{information["weight"]}}</td>
+                <td>{{information["height"]}}</td>
+                <td>{{information["BMI"]}}</td>
+                
+            </tr>
+
+        </tbody>
+    </table>
+    
+    <table class ="table table-striped" border = "1" style="font-family:Sans-serif;color:white;font-size:175%;text-align:center">>
+        <thead>
+            <tr>
+                <th>Calories intake for maintenance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{current_calories_intake}}</td>
+            </tr>
+        </tbody>
+    </table>     
+    
+    <table class ="table table-striped" border = "1" style="font-family:Sans-serif;color:white;font-size:175%;text-align:center">
+        <thead>
+            <tr>
+                <th style = "text-align:left">Carb(gram)</th>
+                <th style = "text-align:center">Protein(gram)</th>
+                <th style = "text-align:right">Fats(gram)</th>
+        
+
+            </tr>
+        </thead>
+        <tfoot>
+          
+        </tfoot>
+        <tbody>
+            <tr>
+                <td style = "text-align:left">{{macros[1]}}</td>
+                <td style = "text-align:center">{{macros[0]}}</td>
+                <td style = "text-align:right">{{macros[2]}}</td>
+             
+            </tr>
+
+        </tbody>
+    </table>
+    
+    
+    <table class ="table table-striped" border = "1" style="font-family:Sans-serif;color:white;font-size:175%;text-align:center">
+        <thead>
+            <tr>
+                <th>Calories intake for your goal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{calories_per_day}}</td>
+            </tr>
+        </tbody>
+        
+    <table class ="table table-striped" border = "1" style="font-family:Sans-serif;color:white;font-size:175%;text-align:center">
+        <thead>
+            <tr>
+                <th style = "text-align:left">Carb(gram)</th>
+                <th style = "text-align:center">Protein(gram)</th>
+                <th style = "text-align:right">Fats(gram)</th>
+        
+
+            </tr>
+        </thead>
+        <tfoot>
+          
+        </tfoot>
+        <tbody>
+            <tr>
+                <td style = "text-align:left">{{macros_for_goal[1]}}</td>
+                <td style = "text-align:center">{{macros_for_goal[0]}}</td>
+                <td style = "text-align:right">{{macros_for_goal[2]}}</td>
+             
+            </tr>
+
+        </tbody>
+    </table>
+    
+    
+    
+</div>
+
+
+{% endblock %}

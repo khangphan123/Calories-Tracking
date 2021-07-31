@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tracking
+{% endblock %}
+
+{% block main %}
+
+    <form action = "/tracking" method = "post">
+        <p style = "font-size: 200%; text-align: center; color: white"> Count your food calories</p>
+        <div class = "form-group">
+        <input style = "text-align: center" class = "form control" name = "food" placeholder = "Food" type = "text">
+        <input style = "text-align:center" class = "form control" name = "calories" placeholder = "Calories" type = "number">
+        <input style = "text-align:center" class = "form control" name = "gram_carb" placeholder = "Carb(gram)" type = "number">
+        <input style = "text-align:center" class = "form control" name = "gram_protein" placeholder = "Protein(gram)" type = "number">
+        <input style = "text-align:center" class = "form control" name = "gram_fat" placeholder = "Fat(gram)" type = "number">
+        </div>
+        <button class = "btn btn-primary" type = "submit" >Enter</button>
+    </form>
+ <table class ="table table-striped" border = "1" style="font-family:Sans-serif;color:white;font-size:175%;text-align:center">>
+        <thead>
+            <tr>
+                <th>Remaining calories and macros you need for the day</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{remaining_calories}}</td>
+            </tr>
+        </tbody>
+</table>
+        
+    <table class ="table table-striped" border = "1" style="font-family:Sans-serif;color:white;font-size:100%;text-align:center">
+        <thead>
+            <tr>
+                <th style = "text-align:left">Carb(gram)</th>
+                <th style = "text-align:center">Protein(gram)</th>
+                <th style = "text-align:right">Fats(gram)</th>
+                
+        
+
+            </tr>
+        </thead>
+        <tfoot>
+          
+        </tfoot>
+        <tbody>
+            <tr>
+                <td style = "text-align:left">{{remaining_carb}}</td>
+                <td style = "text-align:center">{{remaining_protein}}</td>
+                <td style = "text-align:right">{{remaining_fat}}</td>
+             
+            </tr>
+
+        </tbody>
+    </table>
+
+{% endblock %}

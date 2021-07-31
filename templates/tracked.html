@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+ <table class ="table table-striped" border = "1" style="font-family:Sans-serif;color:white;font-size:175%;text-align:center">>
+        <thead>
+            <tr>
+                <th>Remaining calories and macros you need for the day</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{remaining_calories}}</td>
+            </tr>
+        </tbody>
+</table>
+        
+    <table class ="table table-striped" border = "1" style="font-family:Sans-serif;color:white;font-size:100%;text-align:center">
+        <thead>
+            <tr>
+                <th style = "text-align:left">Carb(gram)</th>
+                <th style = "text-align:center">Protein(gram)</th>
+                <th style = "text-align:right">Fats(gram)</th>
+                
+        
+
+            </tr>
+        </thead>
+        <tfoot>
+          
+        </tfoot>
+        <tbody>
+            <tr>
+                <td style = "text-align:left">{{remaining_carb}}</td>
+                <td style = "text-align:center">{{remaining_protein}}</td>
+                <td style = "text-align:right">{{remaining_fat}}</td>
+             
+            </tr>
+
+        </tbody>
+    </table>
+<form action ="/tracked" method = "post">
+    <button class = "btn btn-primary" type = "submit">Reset Progress</button>
+</form>
+{% endblock %}

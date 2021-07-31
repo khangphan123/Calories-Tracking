@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action = "planning" method = "post">
+        <div class = "form-group">
+            <input autocomplete = "off" name = "weight_goal" placeholder = "Goal Weight" type = "number" step = "0.1">
+        </div>
+        <div class = "form-group">
+            <input = autocomplete = 'off' name = "days_goal" placeholder = "In how many days" type = "number">
+        </div>
+        <div class = "form-group">
+            <select class = "form-group" name = "daily_activity">
+                <option>Sedentary: little or no exercise</option>
+                <option>Lightly active(light exercise/sport 1-3 days/week)</option>
+                <option>Moderate exercise(moderate exercise/sports 3-5 days/week)</option>
+                <option>Very active(hard exercise/sports 6-7 days a week)</option>
+                <option>Extra active(very hard exercise/sports & physical job or 2x training)</option>
+            </select>
+        </div>
+        <button class = "btn btn-primary" type = "submit">Enter</button>
+    </form>
+
+{% endblock %}

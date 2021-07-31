@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+
+<form action = "/exercising" method = "post">
+    <p style = "font-size: 200%; text-align: center; color: white">Calories Burned From exercise</p>
+    <div class = "form-group" style = "text-align: center">
+        <input style = "text-align: center" class = "form control" name = "calories_burned" placeholder = "Calories" type = "text">
+        <button class = "btn btn-primary" type = "submit">Enter</button>
+    </div>
+</form>
+
+{% endblock %}
